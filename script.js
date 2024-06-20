@@ -1,7 +1,7 @@
 var start = true;
 
 while (start) {
-  var rand = Math.floor(Math.random() * 11);
+  var rand = Math.floor(Math.random() * 10) + 1;
   var kesempatan = 3;
   var benar = false;
 
@@ -15,11 +15,11 @@ while (start) {
       )
     );
 
-    if (input === kesempatan) {
-      alert("Angka yang anda masukkan benar!");
+    if (input === rand) {
+      alert("Angka yang dimaksud adalah " + rand + "\nJawaban anda benar!");
       benar = true;
       kesempatan = 0;
-    } else if (input !== kesempatan && input > 0 && input <= 10) {
+    } else if (input !== rand && input > 0 && input <= 10) {
       alert("Ups, angka yang anda masukkan salah! ");
       kesempatan--;
     } else {
